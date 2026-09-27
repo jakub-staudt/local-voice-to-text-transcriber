@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Voice to Text Transcriber</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Voice to Text Transcriber</h1>
+
+    <div class="controls">
+      <label for="language">Language</label>
+      <select id="language">
+        <option value="en-US">English</option>
+        <option value="pl-PL">Polish</option>
+      </select>
+
+      <button id="micBtn" class="mic-btn" type="button">
+        <span id="micIcon">🎤</span>
+        <span id="micLabel">Start</span>
+      </button>
+    </div>
+
+    <p id="status" class="status">Idle</p>
+
+    <textarea id="transcript" placeholder="Your transcribed text will appear here..." rows="10"></textarea>
+
+    <div class="actions">
+      <button id="copyBtn" type="button">Copy</button>
+      <button id="clearBtn" type="button">Clear</button>
+    </div>
+
+    <p id="unsupported" class="warning" hidden>
+      Your browser does not support the Web Speech API. Please try Google Chrome or Microsoft Edge.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
